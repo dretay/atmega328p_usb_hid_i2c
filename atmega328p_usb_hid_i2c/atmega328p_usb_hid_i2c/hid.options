@@ -1,0 +1,2 @@
+MouseUpdate.x int_size:IS_16
+MouseUpdate.y int_size:IS_16
