@@ -114,10 +114,19 @@ void setup()
 	#if !defined(__MIPSEL__)
 	while (!Serial); // Wait for serial port to connect - used on Leonardo, Teensy and other boards with built-in USB CDC serial connection
 	#endif
-	Serial.println("Start");
+	Serial.println("Booting...");
+	pinMode(2, OUTPUT);	
+	digitalWrite(2, LOW);
+	delay(1);
+	digitalWrite(2, HIGH);
 
-	if (Usb.Init() == -1)
-	Serial.println("OSC did not start.");
+	if (Usb.Init() == -1){
+		Serial.println("OSC did not start.");
+	}
+	else{
+		Serial.println("OSC started successfully");
+	}
+	
 
 	delay( 200 );
 
@@ -128,6 +137,9 @@ void setup()
 	q_init(&q, sizeof(Rec), 10, IMPLEMENTATION, false);
 	pinMode(8, OUTPUT);
 	digitalWrite(8, LOW);
+	
+	Serial.println("Finished booting!");
+	
 }
 
 void loop()
