@@ -4,5 +4,7 @@
 
 hid.pb.c
 
+scrollmouserptparser.cpp
+
 Sketch.cpp
 

@@ -1,3 +1,5 @@
 .vs/
 atmega328p_usb_hid_i2c/ArduinoCore/Debug/
 atmega328p_usb_hid_i2c/atmega328p_usb_hid_i2c/Debug/
+atmega328p_usb_hid_i2c/ArduinoCore/Release/
+atmega328p_usb_hid_i2c/atmega328p_usb_hid_i2c/Release/
